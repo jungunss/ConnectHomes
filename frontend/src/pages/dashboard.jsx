@@ -3,11 +3,13 @@ import {
   BsArrowLeftShort,
   BsSearch,
   BsChevronDown,
-  BsFillHouseAddFill,
+  BsFillHousesFill,
 } from "react-icons/bs";
 import { RiHomeWifiFill } from "react-icons/ri";
 import { MdDashboardCustomize, MdSpaceDashboard } from "react-icons/md";
-import TableProperty from "../components/TableProperty";
+import { HiMiniUserGroup } from "react-icons/hi2";
+
+import TableProperty from "../components/TableEmployee";
 
 export default function Dashboard() {
   const [open, setOpen] = useState(true);
@@ -78,31 +80,31 @@ export default function Dashboard() {
 
           <li className="text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-600 rounded-md mt-2">
             <span className="text-2xl block float-left">
-              <BsFillHouseAddFill />
+              <HiMiniUserGroup />
             </span>
             <span
               className={`text-base font-medium flex-1 duration-100 ${
                 !open && "hidden"
               }`}
             >
-              Add Property
+              Employees
             </span>
           </li>
 
           <li className="text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-600 rounded-md mt-2">
             <span className="text-2xl block float-left">
-              <MdDashboardCustomize />
+              <BsFillHousesFill />
             </span>
             <span
               className={`text-base font-medium flex-1 duration-100 ${
                 !open && "hidden"
               }`}
             >
-              Media
+              Property
             </span>
           </li>
 
-          <li className="text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-600 rounded-md mt-2">
+          <li className="text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-600 rounded-md mt-9">
             <span className="text-2xl block float-left">
               <MdDashboardCustomize />
             </span>
