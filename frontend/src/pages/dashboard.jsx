@@ -9,7 +9,8 @@ import { RiHomeWifiFill } from "react-icons/ri";
 import { MdDashboardCustomize, MdSpaceDashboard } from "react-icons/md";
 import { HiMiniUserGroup } from "react-icons/hi2";
 
-import TableProperty from "../components/TableEmployee";
+import TableEmployee from "../components/TableEmployee";
+import TableProduct from "../components/TableProduct";
 
 export default function Dashboard() {
   const [open, setOpen] = useState(true);
@@ -206,7 +207,7 @@ export default function Dashboard() {
       </div>
 
       <div className="flex-1 h-screen p-7 pt-8">
-        <TableProperty />
+        <TableProduct />
       </div>
     </div>
   );
