@@ -1,6 +1,6 @@
-import { FaEye, FaEdit, FaCheckCircle } from "react-icons/fa";
+import { FaEye, FaEdit, FaCheckCircle, FaDollarSign } from "react-icons/fa";
 import { RiDeleteBinLine, RiDeleteBack2Fill } from "react-icons/ri";
-import { FaLocationDot, FaHouseFlag } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 
 export default function TableProduct() {
   return (
@@ -50,8 +50,8 @@ export default function TableProduct() {
             <td className="text-sm">
               01/01/2025
               <br />
-              <div className="badge badge-sm badge-success">
-                <FaCheckCircle className="size-[1em]" />
+              <div className="badge badge-sm badge-warning font-bold">
+                <FaDollarSign className="size-[1em]" />
                 SOLD
               </div>
             </td>
@@ -97,7 +97,7 @@ export default function TableProduct() {
           <tr>
             {/* col NUMBER */}
             <th>
-              <kbd className="kbd">1</kbd>
+              <kbd className="kbd">2</kbd>
             </th>
             {/* col NAME */}
             <td>
@@ -122,9 +122,9 @@ export default function TableProduct() {
             <td className="text-sm">
               01/01/2025
               <br />
-              <div className="badge badge-sm badge-warning">
-                <FaHouseFlag className="size-[1em]" />
-                RENT
+              <div className="badge badge-sm badge-success font-bold">
+                <FaCheckCircle className="size-[1em]" />
+                AVAILABLE
               </div>
             </td>
             {/* col PRICE */}
@@ -169,7 +169,7 @@ export default function TableProduct() {
           <tr>
             {/* col NUMBER */}
             <th>
-              <kbd className="kbd">1</kbd>
+              <kbd className="kbd">3</kbd>
             </th>
             {/* col NAME */}
             <td>
@@ -194,9 +194,9 @@ export default function TableProduct() {
             <td className="text-sm">
               01/01/2025
               <br />
-              <div className="badge badge-sm badge-error">
+              <div className="badge badge-sm badge-error font-bold">
                 <RiDeleteBack2Fill className="size-[1em]" />
-                ARCHIVED
+                RESERVED
               </div>
             </td>
             {/* col PRICE */}

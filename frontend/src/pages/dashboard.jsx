@@ -11,6 +11,7 @@ import { HiMiniUserGroup } from "react-icons/hi2";
 
 import TableEmployee from "../components/TableEmployee";
 import TableProduct from "../components/TableProduct";
+import CardProduct from "../components/CardProduct";
 
 export default function Dashboard() {
   const [open, setOpen] = useState(true);
@@ -206,9 +207,10 @@ export default function Dashboard() {
         {/* ## MENU NAVIGATION ## */}
       </div>
 
-      <div className="flex-1 h-screen p-7 pt-8">
-        <TableProduct />
+      <div className="flex-1 max-h-screen p-7 pt-8">
+        {/* <TableProduct /> */}
         {/* <TableEmployee /> */}
+        <CardProduct />
       </div>
     </div>
   );
