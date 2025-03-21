@@ -16,6 +16,7 @@ import CardProduct from "../components/CardProduct";
 export default function Dashboard() {
   const [open, setOpen] = useState(true);
   const [submenuOpen, setSubmenuOpen] = useState(false);
+  const [currentComponent, setCurrentComponent] = useState("dashboard");
 
   return (
     <div className="flex">
@@ -71,39 +72,42 @@ export default function Dashboard() {
             <span className="text-2xl block float-left">
               <MdSpaceDashboard />
             </span>
-            <span
-              className={`text-base font-medium flex-1 duration-100 ${
+            <button
+              className={`text-start text-base font-medium flex-1 duration-100 ${
                 !open && "hidden"
               }`}
+              onClick={() => setCurrentComponent("dashboard")}
             >
               Dashboard
-            </span>
+            </button>
           </li>
 
           <li className="text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-600 rounded-md mt-2">
             <span className="text-2xl block float-left">
               <HiMiniUserGroup />
             </span>
-            <span
-              className={`text-base font-medium flex-1 duration-100 ${
+            <button
+              className={`text-start text-base font-medium flex-1 duration-100 ${
                 !open && "hidden"
               }`}
+              onClick={() => setCurrentComponent("employee")}
             >
               Employees
-            </span>
+            </button>
           </li>
 
           <li className="text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-600 rounded-md mt-2">
             <span className="text-2xl block float-left">
               <BsFillHousesFill />
             </span>
-            <span
-              className={`text-base font-medium flex-1 duration-100 ${
+            <button
+              className={`text-start text-base font-medium flex-1 duration-100 ${
                 !open && "hidden"
               }`}
+              onClick={() => setCurrentComponent("product")}
             >
               Property
-            </span>
+            </button>
           </li>
 
           <li className="text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-gray-600 rounded-md mt-9">
@@ -208,9 +212,9 @@ export default function Dashboard() {
       </div>
 
       <div className="flex-1 max-h-screen p-7 pt-8">
-        {/* <TableProduct /> */}
-        {/* <TableEmployee /> */}
-        <CardProduct />
+        {currentComponent === "dashboard" && <CardProduct />}
+        {currentComponent === "employee" && <TableEmployee />}
+        {currentComponent === "product" && <TableProduct />}
       </div>
     </div>
   );

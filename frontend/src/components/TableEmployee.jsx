@@ -2,10 +2,14 @@ import { FaEye, FaEdit } from "react-icons/fa";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { AiOutlineUserDelete } from "react-icons/ai";
 import { MdWorkOutline } from "react-icons/md";
+import ButtonModalFormEmployee from "./ButtonModalFormEmployee";
 
 export default function TableProperty() {
   return (
     <div className="overflow-x-auto max-h-screen">
+      <div className="pb-5">
+        <ButtonModalFormEmployee />
+      </div>
       <table className="table table-xs table-pin-rows">
         {/* ========== header  ========== */}
         <thead>
